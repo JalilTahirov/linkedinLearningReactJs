@@ -16,19 +16,23 @@
 <body>
     <div id="root"></div>
     <script type="text/babel">
-        const Lake = ({name}) => <h1>{name}</h1>;
+        const Lake = ({ name }) => <h1>{name}</h1>;
 
-        const App = () => (
-            <div>
-                <Lake name="Lake Tahoe"/>
-                <Lake name="Angora Lake"/>
-                <Lake name="Shirey Lake"/>            
-                <Lake name="Cathedral Lake"/>            
-            </div>
-        );
+        class App extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <Lake name="Lake Tahoe" />
+                        <Lake name="Angora Lake" />
+                        <Lake name="Shirey Lake" />
+                        <Lake name="Cathedral Lake" />
+                    </div>
+                )
+            }
+        }            
 
         ReactDOM.render(
-            <App/>,
+            <App />,
             document.getElementById("root")
         );
     </script>
